@@ -39,12 +39,12 @@ class BoggleBoard
         output_string = output_string + @spaces[4..7].join(' ') + "\n"
         output_string = output_string + @spaces[8..11].join(' ') + "\n"
         output_string = output_string + @spaces[12..15].join(' ') + "\n"
-        puts output_string
+        output_string
     end
 end
 board = BoggleBoard.new
-puts board
+# puts board
 # puts board.shake!.to_s
-puts "I am now generating the Boggle Broad"
-puts board.shake!
-puts board
+# puts "I am now generating the Boggle Broad"
+# puts board.shake!
+# puts board
