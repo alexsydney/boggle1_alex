@@ -1,5 +1,11 @@
 # Boggle 1 Basic Board Generation
 
+## How to run the RSpec Tests
+
+```
+cd source; bundle exec rspec boggle_board_spec.rb; cd ..;
+```
+
 ##Learning Competencies
 
 * Model a simple real-world system in Ruby code
