@@ -37,26 +37,28 @@ describe "Boggle Board - Release 0" do
     expect(is_valid_letters(board.to_s)).to eq true
   end
 
-#   it 'has the same state every time to_s is called' do
-#     first_string = board.to_s
-#     second_string = board.to_s
-#     expect(first_string).to eq second_string
-#   end
-#
-#   it 'has a different state after shake is called' do
-#     first_string = board.to_s
-#     board.shake!
-#     second_string = board.to_s
-#     expect(first_string).not_to eq second_string
-#   end
-#
-#   it 'has 4 rows' do
-#     expect(board.shake!.length).to eq(4)
-#   end
-#
-#   it 'has 4 rows with 4 letters each' do
-#     expect(board.shake!.all? {|row| row.length == 4}).to be_truthy
-#   end
+  it 'has the same state every time to_s is called' do
+    first_string = board.to_s
+    second_string = board.to_s
+    expect(first_string).to eq second_string
+  end
+
+  it 'has a different state after shake is called' do
+    first_string = board.to_s
+    board.shake!
+    second_string = board.to_s
+    expect(first_string).not_to eq second_string
+  end
+
+  it 'has 16 letters in total' do
+    expect(board.shake!.length).to eq(16)
+  end
+
+  it 'has 4 rows represented by containing 4x newline characters' do
+    board.shake!
+    # puts "spaces is: #{board.to_s}"
+    expect(board.to_s.count("\n")).to eq 4
+  end
 end
 
 # describe "Boggle Board - Release 1" do

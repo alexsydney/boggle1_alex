@@ -5,6 +5,7 @@
 ```
 cd source; bundle exec rspec boggle_board_spec.rb; cd ..;
 ```
+* Add the `bundle exec rspec -fd <filename>.rb` for details
 
 ##Learning Competencies
 

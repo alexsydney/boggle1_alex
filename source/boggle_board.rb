@@ -1,4 +1,6 @@
 class BoggleBoard
+    attr_accessor :spaces
+
     def initialize
         # how do we describe it
         # @space = Array.new(16, '_') # for all 16 row _
@@ -20,7 +22,7 @@ class BoggleBoard
 
         # APPROACH #3
         @alphabet.map! { |el| el == "Q" ? "Qu" : el }
-
+        print @alphabet
         # @alphabet = @alphabet - ("Q").to_s
         # @alphabet = @alphabet + ("Qu").to_s
     end
@@ -31,6 +33,7 @@ class BoggleBoard
         @spaces.map! do |space|
             space = @alphabet.shuffle.take(1)
         end
+        @spaces.flatten!
     end
     def to_s
         output_string = String.new
@@ -43,8 +46,7 @@ class BoggleBoard
     end
 end
 board = BoggleBoard.new
-# puts board
-# puts board.shake!.to_s
+puts board
+puts board.shake!
 # puts "I am now generating the Boggle Broad"
-# puts board.shake!
-# puts board
+puts board
